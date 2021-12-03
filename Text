@@ -1,0 +1,113 @@
+/*  import { initializeApp } from "firebase/app";
+// import {getAuth} from "firebase/auth";
+// import { firebase } from "@react-native-firebase/auth";
+// import { firebase } from "@react-native-firebase/app";    
+// import { Auth } from "@react-native-firebase/auth";
+// import Auth from "@react-native-firebase/auth";
+// import { auth } from "@react-native-firebase/auth";
+// import App from "./App";
+// import * as React from "react";
+// import * as firebase from 'firebase'; // diffirent
+// import { auth } from "@react-native-firebase/auth";
+// import auth from '@react-native-firebase/auth';
+// import {getAuth} from 'firebase/auth';
+import {getAuth} from 'firebase/auth';
+// import * as firebase from 'firebase';
+// import * as firebase  from "@react-native-firebase/auth";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBjNkZlu_C5uWOQs7ONZmm11dVQNy-SlDw",
+  authDomain: "reactnativeauth-9742d.firebaseapp.com",
+  projectId: "reactnativeauth-9742d",
+  storageBucket: "reactnativeauth-9742d.appspot.com",
+  messagingSenderId: "96508016776",
+  appId: "1:96508016776:web:98beb865727d802df1c73d"
+}; 
+
+const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+
+  // if(!firebase.apps.length) {
+  //   firebase.initializeApp(firebaseConfig);
+  // }
+
+  // // export const auth = firebase.auth()
+  // export {firebase, Auth};
+
+  // function Firebase(){
+  //   return <App />
+  // }
+
+  // export default Firebase;
+
+  // const app = initializeApp(firebaseConfig);
+  // export const auth = getAuth(app);
+
+  // let app;
+  // if (firebase.apps.length===0) {
+  //   app = firebase.initializeApp(firebaseConfig);
+  // } else {
+  //   app = firebase.app()
+  // }  
+  
+  // const auth = firebase.auth()
+  
+  // export { auth }; 
+
+
+  const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+          if (user) {
+            navigation.replace("Home")
+          }
+        })
+    
+        return unsubscribe
+      }, [])
+
+      
+      const 0 = () => {
+      auth
+        .createUserWithEmailAndPassword(email, password)
+        .then(userCredentials => {
+          const user = userCredentials.user;
+          console.log('Registered with:', user.email);
+        })
+        .catch(error => alert(error.message))
+    }
+
+    const handleLogin = () => {
+      auth
+        .signInWithEmailAndPassword(email, password)
+        .then(userCredentials => {
+          const user = userCredentials.user;
+          console.log('Logged in with:', user.email);
+        })
+        .catch(error => alert(error.message))
+    }
+  const handleSignOut = () => {
+      auth
+        .signOut()
+        .then(() => {
+          navigation.replace("Login")
+        })
+        .catch(error => alert(error.message))
+    }
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      */
